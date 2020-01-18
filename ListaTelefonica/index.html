@@ -1,0 +1,48 @@
+<html ng-app="listaTelefonica">
+<head>
+    <meta charset="UTF-8">
+	<title>Lista Telefonica</title>
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+	<script src="lib/angular/angular.js"></script>
+	<script>
+		<!--cria o modulo-->
+		angular.module("listaTelefonica", []);
+		<!--localiza o modulo-->
+		angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function($scope){
+      $scope.app = "Lista Telefonica";
+      $scope.contatos = [
+        {nome: "Pedro", telefone: "99998888"},
+        {nome: "Ana", telefone: "99998877"},
+        {nome: "Maria", telefone: "99998866"}
+      ];
+      $scope.adicionarContato = function (contato){
+        $scope.contatos.push(angular.copy(contato));<!--faz uma cópia-->
+        delete $scope.contato; <!--para n ter o problema de ao digitar interferir na tabela-->
+      };
+		});
+	</script>
+</head>
+<body ng-controller="listaTelefonicaCtrl">
+  <div class="jumbotron">
+    <!-- <h4 ng-bind="app"></h4> -->
+    <h3>{{app}}</h3>
+    <table class="table table-striped">
+      <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+      </tr>
+      <tr ng-repeat="contato in contatos">
+        <!-- <td ng-repeat="(key, value) in contato">
+          {{value}}
+        </td> -->
+        <td>{{contato.nome}}</td>
+        <td>{{contato.telefone}}</td>
+      </tr>
+    </table>
+    <hr/>
+    <input class="form-control" type="text" ng-model="contato.nome" placeholder="Nome"/>
+    <input class="form-control" type="text" ng-model="contato.telefone" placeholder="Telefone"/>
+    <button class="btn btn-primary btn-block" ng-click="adicionarContato(contato)">Adicionar Contato</button>
+  </div>
+</body>
+</html>
