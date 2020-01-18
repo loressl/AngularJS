@@ -1,0 +1,8 @@
+*Dentro da pasta do projeto
+npm init
+npm install -g json-server
+json-server file.json <<cria localhost para acessar os dados do file.json que a pessoa for criar
+*ng -v >> npm install -g @angular/cli
+ng new traning-bank <<<cria novo projeto
+ng s ou ng server>> rodar o servidor angular
+ng g s alunos >>> cria o serviço
