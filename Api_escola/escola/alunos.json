@@ -1,0 +1,19 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Flavio",
+      "idade": 25
+    },
+    {
+      "id": 2,
+      "nome": "Joyce",
+      "idade": 22
+    },
+    {
+      "nome": "Ariel",
+      "idade": "20",
+      "id": 4
+    }
+  ]
+}
