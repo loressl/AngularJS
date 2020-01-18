@@ -1,5 +1,6 @@
 Referências: https://www.youtube.com/watch?v=Ep0GPo1N3Qc
 
+![api_escola](https://github.com/loressl/AngularJS/blob/master/images/api_escola.png)
 
 # Escola
 
