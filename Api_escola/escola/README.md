@@ -1,3 +1,6 @@
+Referências: https://www.youtube.com/watch?v=Ep0GPo1N3Qc
+
+
 # Escola
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
